@@ -1,54 +1,118 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CARVEX</title>
+<title>CARVEX - Calidad y Descanso</title>
 <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
-<h1>CARVEX</h1>
+<header class="main-header">
+    <div class="container header-content">
+        <h1 style="color:white;">CARVEX</h1>
+        <div class="header-logo-image">
+            <img src="imagenes/logo.png">
+        </div>
+    </div>
+</header>
 
-<!-- LOGO -->
-<img src="imagenes/logo.png" alt="logo" width="200">
+<!-- HERO -->
+<section class="hero-section">
+<div class="carousel">
+<div class="carousel-slides">
+
+<div class="slide active">
+<img class="hero-carousel-image" src="imagenes/carrusel/comodo.avif">
+</div>
+
+<div class="slide">
+<img class="hero-carousel-image" src="imagenes/carrusel/imagen1.png">
+</div>
+
+<div class="slide">
+<img class="hero-carousel-image" src="imagenes/carrusel/perro.png">
+</div>
+
+</div>
+
+<button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+<button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+
+</div>
+</section>
 
 <!-- SÁBANAS -->
+<section id="sabanas">
 <h2>Sábanas</h2>
-<img src="imagenes/sabanas/cobija-1.jpeg" width="200">
-<img src="imagenes/sabanas/cobija-2.jpeg" width="200">
 
-<p>Cama sencilla - $33.000</p>
-<p>Semidoble - $37.000</p>
-<p>Doble - $40.000</p>
+<img src="imagenes/sabanas/cobija-1.jpeg">
+<img src="imagenes/sabanas/cobija-2.jpeg">
+
+<p>$33.000 - $60.000</p>
+</section>
 
 <!-- COLCHAS -->
+<section id="colchas">
 <h2>Colchas</h2>
-<img src="imagenes/colchas/colcha-1.jpeg" width="200">
-
-<p>Cama sencilla - $60.000</p>
-<p>Semidoble - $65.000</p>
+<img src="imagenes/colchas/colcha-1.jpeg">
+<p>$60.000 - $90.000</p>
+</section>
 
 <!-- PROTECTORES -->
+<section id="protectores">
 <h2>Protectores</h2>
-<img src="imagenes/protectores/protector-1.jpeg" width="200">
-
-<p>Cama sencilla - $48.000</p>
+<img src="imagenes/protectores/protector-1.jpeg">
+<p>$48.000 - $65.000</p>
+</section>
 
 <!-- CORTINAS -->
+<section id="cortinas">
 <h2>Cortinas</h2>
-<img src="imagenes/cortinas/cortina-1.jpeg" width="200">
-
-<p>Unidad - $40.000</p>
-
-<!-- CAMAS PERRO -->
-<h2>Camas para perro</h2>
-<img src="imagenes/camas-perro/cama_p-1.jpeg" width="200">
+<img src="imagenes/cortinas/cortina-1.jpeg">
+<p>$40.000</p>
+</section>
 
 <!-- CARPA -->
+<section id="carpas">
 <h2>Carpa para moto</h2>
-<img src="imagenes/carpa-moto/carpa.jpeg" width="200">
+<img src="imagenes/carpa-moto/carpa.jpeg">
+<p>$100.000</p>
+</section>
+
+<!-- PERROS -->
+<section id="perros">
+<h2>Camas para perro</h2>
+<img src="imagenes/camas-perro/cama_p-1.jpeg">
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/573142926642" class="whatsapp-float">💬</a>
+
+<footer>
+<p>© CARVEX 2026</p>
+</footer>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(i){
+slides.forEach(s=>s.style.display="none");
+slides[i].style.display="block";
+}
+
+function changeSlide(n){
+slideIndex += n;
+if(slideIndex >= slides.length) slideIndex=0;
+if(slideIndex < 0) slideIndex=slides.length-1;
+showSlide(slideIndex);
+}
+
+setInterval(()=>changeSlide(1),4000);
+showSlide(slideIndex);
+</script>
 
 </body>
 </html>
