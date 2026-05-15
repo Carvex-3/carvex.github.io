@@ -55,14 +55,6 @@ body {
     gap: 16px;
 }
 
-.brand-image {
-    width: 190px;
-    max-height: 90px;
-    object-fit: contain;
-    display: block;
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.24));
-}
-
 .logo a {
     text-decoration: none;
 }
@@ -850,3 +842,67 @@ body {
 
 
 
+
+.brand-image {
+    width: 190px;
+    max-height: 90px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.24));
+}
+
+
+/* Ajuste final de paleta CARVEX: azul oscuro, gris y blanco oscuro */
+.main-nav,
+.categories-section,
+.products-section,
+.products-section:nth-of-type(even),
+.highlight-section {
+    background: var(--color-soft);
+}
+
+.category-card,
+.product-card,
+.small-carousel,
+.product-modal-content {
+    background: var(--color-card);
+    border-color: var(--color-border);
+}
+
+.category-card h3,
+.product-name,
+.section-title,
+.footer-section h3 {
+    color: var(--color-white);
+}
+
+.product-price,
+.modal-product-price {
+    color: var(--color-accent) !important;
+}
+
+.nav-menu a {
+    color: var(--color-white);
+}
+
+.nav-menu a:hover {
+    background: var(--color-card);
+    color: var(--color-accent);
+}
+
+.category-card:hover,
+.product-card:hover {
+    border-color: var(--color-secondary);
+    box-shadow: 0 12px 28px rgba(154, 168, 184, 0.22);
+}
+
+.search-bar,
+.category-select {
+    background: #e7ebf0;
+    color: #0b1f3a;
+}
+
+.logo-placeholder.small {
+    background: #172338;
+    color: var(--color-white);
+}
