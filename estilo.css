@@ -641,10 +641,11 @@ body {
 }
 
 .product-modal-info h2 {
-    color: var(--color-primary);
+    color: #f2f5f8;
     font-size: 28px;
     text-transform: uppercase;
 }
+
 
 .product-modal-info p {
     color: var(--color-text);
