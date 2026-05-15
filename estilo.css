@@ -2,16 +2,17 @@
 /* ESTILOS GENERALES */
 /* ============================================ */
 :root {
-    --color-primary: #1f3c88;
-    --color-secondary: #ffb703;
-    --color-accent: #fb8500;
-    --color-soft: #f7fbff;
-    --color-white: #ffffff;
-    --color-text: #263238;
-    --color-muted: #5d6d7e;
-    --color-border: #dbe7f3;
-    --color-green: #25d366;
+    --color-primary: #0b1f3a;
+    --color-secondary: #9aa8b8;
+    --color-accent: #d7dde5;
+    --color-soft: #111827;
+    --color-white: #f2f5f8;
+    --color-text: #dbe3ec;
+    --color-muted: #aab6c4;
+    --color-border: #34465c;
+    --color-card: #172338;
 }
+
 
 * {
     margin: 0;
@@ -52,6 +53,14 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
+}
+
+.brand-image {
+    width: 190px;
+    max-height: 90px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.24));
 }
 
 .logo a {
